@@ -37,18 +37,18 @@ Four unique algorithms are evaluated across five model configurations:
 
 ## Methodology
 
-- Dataset loading and exploration
-- Handling invalid zero values in selected features
-- Median imputation for missing values
-- Feature scaling where required
-- Stratified 80:20 train-test split
-- Baseline model training
-- Five-fold cross-validation
-- Random Forest hyperparameter tuning
-- Evaluation using accuracy, precision, recall, F1-score, and ROC-AUC
-- Model comparison and final model selection
-- Saving the trained model
-- Streamlit application development
+1. Dataset loading and exploration
+2. Handling invalid zero values in selected features
+3. Median imputation for missing values
+4. Feature scaling where required
+5. Stratified 80:20 train-test split
+6. Baseline model training
+7. Five-fold cross-validation
+8. Random Forest hyperparameter tuning
+9. Evaluation using accuracy, precision, recall, F1-score, and ROC-AUC
+10. Model comparison and final model selection
+11. Saving the trained model
+12. Streamlit application development
 
 ## Experimental Results
 
@@ -63,7 +63,7 @@ SVM was selected based on the highest mean five-fold cross-validation F1-score.
 | ROC-AUC | 81.39% |
 | Mean CV F1-score | 0.6902 |
 
-Decision Tree achieved the highest test-set F1-score of 70.09%. However, SVM was selected using cross-validation performance rather than test-set performance alone.
+**Model Comparison Note:** Decision Tree achieved the highest test-set F1-score of 70.09%. However, SVM was selected using cross-validation performance rather than test-set performance alone.
 
 ## Technologies Used
 
@@ -78,25 +78,22 @@ Decision Tree achieved the highest test-set F1-score of 70.09%. However, SVM was
 
 ```text
 DIABETES_PREDICTION/
-|-- app.py
-|-- train.py
-|-- README.md
-|-- requirements.txt
-|
-|-- dataset/
-|   |-- diabetes.csv
-|
-|-- models/
-|   |-- best_model.pkl
-|   |-- final_model_name.txt
-|
-|-- results/
-    |-- confusion_matrix.png
-    |-- cross_validation.csv
-    |-- cross_validation_comparison.png
-    |-- model_comparison.csv
-    |-- model_comparison.png
-    |-- roc_curve.png
+├── app.py
+├── train.py
+├── README.md
+├── requirements.txt
+├── dataset/
+│   └── diabetes.csv
+├── models/
+│   ├── best_model.pkl
+│   └── final_model_name.txt
+└── results/
+    ├── confusion_matrix.png
+    ├── cross_validation.csv
+    ├── cross_validation_comparison.png
+    ├── model_comparison.csv
+    ├── model_comparison.png
+    └── roc_curve.png
 ```
 
 ## Installation and Execution
@@ -105,6 +102,7 @@ DIABETES_PREDICTION/
 
 ```bash
 git clone https://github.com/24A31A05BQ/DIABETES_PREDICTION.git
+cd DIABETES_PREDICTION
 ```
 
 ### 2. Install Dependencies
@@ -138,6 +136,14 @@ The training script generates the trained model and evaluation results.
 ## Limitations
 
 The dataset contains 768 records and represents a specific population. Model performance may not generalize to other populations or clinical settings. Independent validation is necessary before considering any real-world application.
+
+## Future Scope
+
+- Evaluate the model using larger and more diverse datasets.
+- Explore additional machine learning algorithms and ensemble techniques.
+- Improve model interpretability using explainable AI techniques.
+- Perform independent validation on external datasets.
+- Enhance the application's usability and analytics features.
 
 ## Disclaimer
 
