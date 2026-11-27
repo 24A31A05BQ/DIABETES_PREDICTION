@@ -104,8 +104,7 @@ DIABETES_PREDICTION/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/DIABETES_PREDICTION.git
-cd DIABETES_PREDICTION
+git clone https://github.com/24A31A05BQ/DIABETES_PREDICTION.git
 ```
 
 ### 2. Install Dependencies
